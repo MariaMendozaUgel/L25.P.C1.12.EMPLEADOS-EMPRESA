@@ -18,5 +18,7 @@ empresa.procesarPersonal(empleado2);
 empresa.procesarPersonal(empleado3);
 empresa.procesarPersonal(empleado4);
 
-alert("Cantidad de hombres que trabajan en la empresa: " + empresa.totalHombresEmpresa());
-alert("Porcentaje de mujeres que trabajan en la empresa: %" + empresa.porcentajeMujeres());
+let Salida = document.getElementById("Salida");
+
+Salida.innerHTML = `Cantidad de hombres trabajando en la empresa: ${empresa.totalHombresEmpresa()} <br>	
+Porcentaje de mujeres trabajando en la empresa: ${empresa.porcentajeMujeres()}%`;
