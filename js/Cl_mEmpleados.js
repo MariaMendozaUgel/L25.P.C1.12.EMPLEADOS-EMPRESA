@@ -1,5 +1,5 @@
-export default class Cl_empleados {
-    constructor(nombre, sexo) {
+export default class Cl_mEmpleados {
+    constructor({nombre, sexo}) {
         this.nombre = nombre;
         this.sexo = sexo;
     }
@@ -11,7 +11,7 @@ export default class Cl_empleados {
     }
     
     set sexo(sexo) {
-        this._sexo = sexo;
+        this._sexo = sexo.toUpperCase();
     }
     get sexo() {
         return this._sexo;

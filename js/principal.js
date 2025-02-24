@@ -3,22 +3,15 @@
 de hombres que trabajan en la empresa y porcentaje de mujeres que trabajan en la empresa. 
 Se dispone de los siguientes datos de varios empleados: (nombre, sexo) (Mary, ‘F’), 
 (José, ‘M’), (Carlos, ‘M’), (Pedro, ‘M’)*/
-import Cl_empleados from "./Cl_empleados.js";
-import Cl_empresa from "./Cl_empresa.js";
+import Cl_mEmpresa from "./Cl_mEmpresa.js";
+import Cl_vEmpresa from "./Cl_vEmpresa.js";
+import Cl_controlador from "./Cl_controlador.js";
 
-let empleado1 = new Cl_empleados("Mary", "F");
-let empleado2 = new Cl_empleados("Jose", "M");
-let empleado3 = new Cl_empleados("Carlos", "M"); 
-let empleado4 = new Cl_empleados("Pedro", "M");
-
-let empresa = new Cl_empresa();
-
-empresa.procesarPersonal(empleado1);
-empresa.procesarPersonal(empleado2);
-empresa.procesarPersonal(empleado3);
-empresa.procesarPersonal(empleado4);
-
-let Salida = document.getElementById("Salida");
-
-Salida.innerHTML = `Cantidad de hombres trabajando en la empresa: ${empresa.totalHombresEmpresa()} <br>	
-Porcentaje de mujeres trabajando en la empresa: ${empresa.porcentajeMujeres()}%`;
+export default class principal {
+    constructor() {
+        let vista = new Cl_vEmpresa();
+        let modelo = new Cl_mEmpresa();
+        let controlador = new Cl_controlador(modelo, vista);
+        vista.controlador = controlador;
+    }
+}

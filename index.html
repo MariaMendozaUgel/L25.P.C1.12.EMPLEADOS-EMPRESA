@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Empleados Empresa</title>
 </head>
 <body>
-    <div id="Salida"></div>
-    <script src="./js/principal.js" type="module"></script>
+   <section id="mainForm">
+    <h3>empleados empresa</h3>
+    <table id="mainForm_tabla">
+        <tr>
+            <th>Nombre</th>
+            <th>Sexo</th>
+        </tr>
+    </table>
+    <h5>Total hombres trabajando en la empresa: <span id="mainForm_lblTotalHombresEmpresa">?</span></h5>
+    <h5>Porcentaje de mujeres trabajando en la empresa: <span id="mainForm_lblPorcentajeMujeres"></span>%</h5>
+    <button id="mainForm_btAgregar">Agregar</button>
+   </section>
+   <section id="empleadosForm">
+<h3>Datos del empleado</h3>
+<input type="text" id="empleadosForm_inNombre" placeholder="Nombre empleado"></input>
+<input type="text" id="empleadosForm_inSexo" placeholder="Sexo empleado"></input>
+<button id="empleadosForm_btAceptar">Aceptar</button>
+   </section>
 </body>
+<script type="module" >
+    import principal from "./js/principal.js";
+    new principal();
+</script>
+
 </html>

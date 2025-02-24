@@ -1,15 +1,15 @@
-export default class Cl_empresa {
+export default class Cl_mEmpresa {
     constructor() {
         this.contEmpleados = 0;
         this.contMasculinos = 0;
         this.contFemeninos = 0;
     }
 
-    procesarPersonal(p) {
+    procesarEmpleados(p) {
         this.contEmpleados++;
         if (p.sexo == "M") {
             this.contMasculinos++;
-        } else {
+        } if (p.sexo == "F") {
             this.contFemeninos++;
         }
     }
